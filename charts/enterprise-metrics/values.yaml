@@ -213,7 +213,10 @@ adminApi:
   podLabels: {}
   podAnnotations: {}
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   extraArgs: {}
 
@@ -306,7 +309,10 @@ alertmanager:
       port: http-metrics
     initialDelaySeconds: 45
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   # Tolerations for pod assignment
   # ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
@@ -412,7 +418,10 @@ distributor:
       port: http-metrics
     initialDelaySeconds: 45
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
@@ -450,7 +459,11 @@ gateway:
   podLabels: {}
   podAnnotations: {}
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
+
   initContainers: []
 
   extraArgs: {}
@@ -556,7 +569,10 @@ ingester:
       port: http-metrics
     initialDelaySeconds: 60
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
@@ -595,7 +611,10 @@ overridesExporter:
   podLabels: {}
   podAnnotations: {}
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   extraArgs: {}
 
@@ -659,7 +678,10 @@ ruler:
       port: http-metrics
     initialDelaySeconds: 45
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
@@ -723,7 +745,10 @@ querier:
       port: http-metrics
     initialDelaySeconds: 45
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
@@ -787,7 +812,10 @@ queryFrontend:
       port: http-metrics
     initialDelaySeconds: 45
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
@@ -883,7 +911,10 @@ storeGateway:
       port: http-metrics
     initialDelaySeconds: 60
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
@@ -979,7 +1010,10 @@ compactor:
       port: http-metrics
     initialDelaySeconds: 60
 
-  securityContext: {}
+  securityContext:
+    runAsNonRoot: true
+    runAsGroup: 10001
+    runAsUser: 10001
 
   strategy:
     type: RollingUpdate
