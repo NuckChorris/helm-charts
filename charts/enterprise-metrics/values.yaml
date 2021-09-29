@@ -725,7 +725,7 @@ querier:
   extraPorts: []
   env: []
 
-query_frontend:
+queryFrontend:
   replicas: 1
 
   service:
