@@ -179,7 +179,7 @@ rbac:
   create: true
   pspEnabled: true
 
-admin_api:
+adminApi:
   replicas: 1
 
   annotations: {}

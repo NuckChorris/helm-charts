@@ -11,7 +11,7 @@
 # for more information.
 # Minio is no longer enabled and you are encouraged to use your cloud providers
 # object storage service for production deployments.
-admin_api:
+adminApi:
   replicas: 3
   resources:
     limits:
